@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html {
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  /* Background Colors */
+  --bg-primary-color: #191919;
+
+  /* Text Colors */
+  --text-primary-color: #d2cfcf;
+  --text-secondary-color: #565353;
+
+  /* spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 40px;
+
+  /* Border */
+  --border-width-xs: 1px;
+  --border-width-sm: 2px;
+  --border-width-md: 4px;
+  --border-width-lg: 8px;
+  --border-width-xl: 12px;
+  --border-width-2xl: 16px;
+
+  /* Border Radius */
+  --border-radius-xs: 1px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 24px;
+
+  /* Font */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+main {
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info h2 {
+  font-size: var(--font-size-xl);
+  padding-inline: var(--spacing-md);
+  padding-block: var(--spacing-sm);
+  border: solid var(--text-primary-color) var(--border-width-xs);
+  border-radius: var(--border-radius-md);
+}
+
+.board {
+  border: solid var(--text-primary-color) var(--border-width-xs);
+  flex-grow: 1;
+  margin-top: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+  overflow: hidden;
+}
+
+.block {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid var(--text-secondary-color) var(--border-width-xs);
+}
