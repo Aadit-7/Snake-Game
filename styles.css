@@ -18,6 +18,7 @@ html {
 :root {
   /* Background Colors */
   --bg-primary-color: #191919;
+  --bg-fill-color: #931111;
 
   /* Text Colors */
   --text-primary-color: #d2cfcf;
@@ -91,6 +92,7 @@ main {
 }
 
 .block {
+  font-size: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -98,4 +100,8 @@ main {
   align-items: center;
   justify-content: center;
   border: solid var(--text-secondary-color) var(--border-width-xs);
+}
+
+.fill {
+  background-color: var(--bg-fill-color);
 }
