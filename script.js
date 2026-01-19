@@ -149,15 +149,11 @@ function startTimer() {
       .toString()
       .padStart(2, "0");
 
-    const seconds = (gameTime % 60)
-      .toString()
-      .padStart(2, "0");
+    const seconds = (gameTime % 60).toString().padStart(2, "0");
 
     timeEl.innerHTML = `${minutes}:${seconds}`;
   }, 1000);
 }
-
-
 
 /* Resets game state for a fresh start */
 function resetGame() {
@@ -176,7 +172,7 @@ function resetGame() {
   food = generateFood();
 
   modal.style.display = "none";
-  intervalId = setInterval(gameLoop, 100);
+  intervalId = setInterval(gameLoop, 200);
   startTimer();
 }
 
@@ -192,7 +188,7 @@ addEventListener("keydown", (e) => {
 startBtn.addEventListener("click", () => {
   food = generateFood();
   modal.style.display = "none";
-  intervalId = setInterval(gameLoop, 100);
+  intervalId = setInterval(gameLoop, 200);
   startTimer();
 });
 
